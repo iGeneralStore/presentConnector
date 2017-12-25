@@ -13,4 +13,5 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 DISTFILES += \
-    qml/proConnector/main.qml
+    qml/proConnector/main.qml \
+    qml/proConnector/test/SectionWifi.qml

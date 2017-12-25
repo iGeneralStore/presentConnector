@@ -1,7 +1,7 @@
 import QtQuick 2.2
 import QtQuick.Controls 1.2
-import QtQuick.Dialogs 1.1
-import QtQuick.Window 2.1
+
+import "test"
 
 ApplicationWindow {
     id: appWindow
@@ -12,12 +12,23 @@ ApplicationWindow {
     visible: true
 
     Item {
-        id: container
+        id: itemContainer
 
         anchors.fill: parent
 
         Loader {
             id: loader
+
+            //sourceComponent: undefined
+            sourceComponent: comSectionWifi
+
+            anchors.fill: parent
+
+            Component {
+                id: comSectionWifi
+
+                SectionWifi { }
+            }
         }
     }
 
